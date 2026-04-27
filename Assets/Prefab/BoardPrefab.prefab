@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6373066772108466058}
   - component: {fileID: 8477222203708201044}
-  - component: {fileID: 6412898646332370163}
   m_Layer: 0
   m_Name: BoardPrefab
   m_TagString: Untagged
@@ -50,18 +49,6 @@ MonoBehaviour:
   spline: {fileID: 0}
   speed: 0.2
   stopPoint: 0.5
---- !u!114 &6412898646332370163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 661104972570902782}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b9633094568559498bb1f25ec8db06a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &2823780138816428361
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,7 +67,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3772904777389404245
 RectTransform:
   m_ObjectHideFlags: 0
@@ -256,6 +243,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b85e76419442da4eb04a194b7d8e390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  wordPrefab: {fileID: 1509595170179324274, guid: 5cb4972cb94e9344391650f5954448fd, type: 3}
+  wordContainer: {fileID: 4419090179032403718}
+  spacingX: 0.5
+  spacingY: 0.5
+  maxLineWidth: 4
+--- !u!1 &3690129727526579832
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4419090179032403718}
+  - component: {fileID: 6793875252839840252}
+  m_Layer: 0
+  m_Name: WordContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4419090179032403718
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3690129727526579832}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8075652290628082390}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.206, y: -0.07179999}
+  m_SizeDelta: {x: 24.656, y: 11.3555}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &6793875252839840252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3690129727526579832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b85e76419442da4eb04a194b7d8e390, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoardDisplay
+  wordPrefab: {fileID: 1509595170179324274, guid: 5cb4972cb94e9344391650f5954448fd, type: 3}
+  wordContainer: {fileID: 4419090179032403718}
+  spacingX: 0.05
+  spacingY: 0.5
+  maxLineWidth: 4
 --- !u!1 &4882965218114583435
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +332,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3772904777389404245}
+  - {fileID: 4419090179032403718}
   m_Father: {fileID: 6373066772108466058}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2115847471943283411

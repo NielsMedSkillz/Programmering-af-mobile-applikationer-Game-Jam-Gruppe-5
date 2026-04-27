@@ -4,28 +4,23 @@ using UnityEngine.InputSystem;
 public class BoardEraser : MonoBehaviour
 {
     public Inputs input;
-
-    Camera cam;
-    Vector3 dragStart;
-
-    void Awake() => cam = Camera.main;
+    public Camera cam;
 
     void Update()
     {
-        if (input.click.WasPressedThisFrame())
-            dragStart = GetMouseWorld();
-
-        if (input.click.WasReleasedThisFrame())
+        if (input.click.triggered)
         {
-            Vector3 dragEnd = GetMouseWorld();
-            Debug.Log($"Drag from {dragStart} to {dragEnd}");
-        }
-    }
+            Vector2 worldPos = cam.ScreenToWorldPoint(
+                Mouse.current.position.ReadValue());
 
-    Vector3 GetMouseWorld()
-    {
-        Vector3 mp = Mouse.current.position.ReadValue();
-        mp.z = Mathf.Abs(cam.transform.position.z);
-        return cam.ScreenToWorldPoint(mp);
+            Collider2D hit = Physics2D.OverlapPoint(worldPos);
+
+            if (hit != null)
+            {
+                WordObject word = hit.GetComponent<WordObject>();
+                if (word != null)
+                    word.Erase();
+            }
+        }
     }
 }

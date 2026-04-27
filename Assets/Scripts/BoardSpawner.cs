@@ -6,17 +6,14 @@ public class BoardSpawner : MonoBehaviour
     public GameObject boardPrefab;
     public BoardData[] boards;
     public SplineContainer spline;
+    public Inputs input;
 
     int index = 0;
 
-    public Inputs input;
-
     private void Update()
     {
-        if(input.complete.triggered)
-        {
+        if (input.complete.triggered)
             SpawnNext();
-        }
     }
 
     public void SpawnNext()
@@ -27,7 +24,6 @@ public class BoardSpawner : MonoBehaviour
 
         board.GetComponent<BoardFollowSpline>().spline = spline;
         board.GetComponent<BoardFollowSpline>().input = input;
-        board.GetComponent<BoardEraser>().input = input;
 
         board.GetComponentInChildren<BoardDisplay>().Setup(boards[index]);
 
