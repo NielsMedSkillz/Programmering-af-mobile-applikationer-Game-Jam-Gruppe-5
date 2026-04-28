@@ -6,7 +6,6 @@ public class SubmitManager : MonoBehaviour
 
     public void OnSubmit()
     {
-        Debug.Log("gwhetjjf");
         PromptClickDetector[] prompts = FindObjectsByType<PromptClickDetector>(FindObjectsSortMode.None);
 
         bool correctSelected = false;

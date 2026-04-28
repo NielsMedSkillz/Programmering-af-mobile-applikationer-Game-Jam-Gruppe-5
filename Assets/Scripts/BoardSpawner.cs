@@ -12,6 +12,9 @@ public class BoardSpawner : MonoBehaviour
     public Inputs input;
     public Canvas canvas;
 
+    public bool stopped;
+    public bool resumed;
+
     int index = 0;
 
     private void Update()
@@ -32,10 +35,16 @@ public class BoardSpawner : MonoBehaviour
 
         PromptSpawner spawner = board.GetComponent<PromptSpawner>();
         spawner.submitManager = submitManager;
-
         spawner.SpawnPrompt(boards[index]);
 
         index++;
+    }
+
+
+    public void resumeBoard()
+    {
+        board.GetComponent<BoardFollowSpline>().stopped = false;
+        board.GetComponent<BoardFollowSpline>().resumed = true;
     }
 
     void Start()
