@@ -9,6 +9,7 @@ public class PromptClickDetector : MonoBehaviour, IPointerClickHandler
     private TMP_Text text;
     private bool selected = false;
 
+
     void Awake()
     {
         text = GetComponent<TMP_Text>();
@@ -18,7 +19,7 @@ public class PromptClickDetector : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         selected = !selected;
-
+ 
         if (selected)
             text.color = Color.red;
         else
