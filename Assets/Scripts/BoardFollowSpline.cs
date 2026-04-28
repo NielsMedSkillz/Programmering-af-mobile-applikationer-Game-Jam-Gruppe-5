@@ -10,14 +10,14 @@ public class BoardFollowSpline : MonoBehaviour
     public SplineContainer spline;
     public float speed = 0.2f;
 
-    float t = 0f;
+    public float t = 0f;
 
     public float stopPoint = 0.5f;
     bool stopped = false;
     bool resumed = false;
 
     void Update()
-    {
+    {   
         if (!stopped)
         {
             t += speed * Time.deltaTime;
