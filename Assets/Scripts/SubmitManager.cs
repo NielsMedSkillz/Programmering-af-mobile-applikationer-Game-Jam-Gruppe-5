@@ -19,9 +19,12 @@ public class SubmitManager : MonoBehaviour
             if (prompt.selected)
             {
                 if (prompt.index == correctIndex)
+                {
+                    Debug.Log("donnneone");
                     correctSelected = true;
+                }
+
                 else wrongSelected = true;
-                    wrongSelected = true;
             }
         }
 
@@ -33,6 +36,11 @@ public class SubmitManager : MonoBehaviour
         }
 
         else
+        {
             Debug.Log("Fail!");
+            points--;
+            pointText.text = points.ToString();
+        }
+
     }
 }

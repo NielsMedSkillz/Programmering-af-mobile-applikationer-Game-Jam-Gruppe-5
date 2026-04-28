@@ -31,7 +31,6 @@ public class BoardFollowSpline : MonoBehaviour
 
         if (resumed && !stopped)
         {
-            Debug.Log("grejtjeghj");
             t += speed * Time.deltaTime;
         }
 
