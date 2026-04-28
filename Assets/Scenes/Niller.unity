@@ -696,6 +696,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1253169272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1253169274}
+  - component: {fileID: 1253169273}
+  m_Layer: 0
+  m_Name: SubmitManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1253169273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253169272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 295605d11f5765447abec91368a0addc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  correctIndex: 0
+--- !u!4 &1253169274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253169272}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1474.8602, y: 872.8089, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1360748535 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1607945806575881876, guid: 251576e432bebd540bd0a991ca45232f, type: 3}
@@ -978,6 +1023,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   boardPrefab: {fileID: 661104972570902782, guid: 2fb96e9357e0ea446a9be4510940144b, type: 3}
+  submitManager: {fileID: 1253169273}
   board: {fileID: 0}
   boards:
   - {fileID: 11400000, guid: facf015aeb073c24693cad9ada3c964b, type: 2}
@@ -1183,18 +1229,18 @@ PrefabInstance:
     - target: {fileID: 4948946991553331592, guid: 251576e432bebd540bd0a991ca45232f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: -4638265855948483629, guid: 2fb96e9357e0ea446a9be4510940144b, type: 3}
+      objectReference: {fileID: 1253169273}
     - target: {fileID: 4948946991553331592, guid: 251576e432bebd540bd0a991ca45232f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4948946991553331592, guid: 251576e432bebd540bd0a991ca45232f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckAnswer
+      value: OnSubmit
       objectReference: {fileID: 0}
     - target: {fileID: 4948946991553331592, guid: 251576e432bebd540bd0a991ca45232f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PromptClickDetector, Assembly-CSharp
+      value: SubmitManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4948946991553331592, guid: 251576e432bebd540bd0a991ca45232f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1216,3 +1262,4 @@ SceneRoots:
   - {fileID: 1927114891}
   - {fileID: 686246461}
   - {fileID: 1091893998}
+  - {fileID: 1253169274}

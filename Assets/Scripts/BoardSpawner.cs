@@ -4,6 +4,7 @@ using UnityEngine.Splines;
 public class BoardSpawner : MonoBehaviour
 {
     public GameObject boardPrefab;
+    public SubmitManager submitManager;
 
     public GameObject board;
     public BoardData[] boards;
@@ -29,7 +30,10 @@ public class BoardSpawner : MonoBehaviour
         board.GetComponent<BoardFollowSpline>().spline = spline;
         board.GetComponent<BoardFollowSpline>().input = input;
 
-        board.GetComponent<PromptSpawner>().SpawnPrompt(boards[index]);
+        PromptSpawner spawner = board.GetComponent<PromptSpawner>();
+        spawner.submitManager = submitManager;
+
+        spawner.SpawnPrompt(boards[index]);
 
         index++;
     }
