@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board3
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  fullPrompt: "I\u2019m trying to reset my account but I\u2019m not getting the email
-    (it should go to emma.jensen92@email.com). What could be causing this delay?"
-  badPhrases:
-  - (it should go to emma.jensen92@email.com)
+  sentances:
+  - What are some possible punishments for theft in Denmark?
+  - 'I was recently charged with theft and will be in court soon. '
+  correctSentance: 1
