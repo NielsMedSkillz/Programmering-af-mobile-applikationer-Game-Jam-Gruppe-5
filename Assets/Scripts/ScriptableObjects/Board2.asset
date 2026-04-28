@@ -12,11 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board2
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  fullPrompt: 'My app keeps returning a 401 unauthorized error when I try to fetch
-    data. What are common reasons this happens?
-
-    API key: sk-live-ABC123XYZ
-
-'
-  badPhrases:
-  - 'API key: sk-live-ABC123XYZ '
+  sentances:
+  - My app keeps returning a 401 unauthorized error when I try to fetch data.
+  - What are common reasons this happens?
+  - 'API key: sk-live-ABC123XYZ'
+  correctSentance: 2
