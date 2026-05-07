@@ -1485,6 +1485,7 @@ MonoBehaviour:
   correctIndex: 0
   points: 0
   pointText: {fileID: 641598955}
+  submitButton: {fileID: 360077405}
   boardSpawner: {fileID: 1927114890}
 --- !u!4 &1253169274
 Transform:
