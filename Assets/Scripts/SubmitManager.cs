@@ -7,6 +7,8 @@ public class SubmitManager : MonoBehaviour
     public int points;
     public TextMeshProUGUI pointText;
 
+    public BoardSpawner boardSpawner;
+
     public void OnSubmit()
     {
         PromptClickDetector[] prompts = FindObjectsByType<PromptClickDetector>(FindObjectsSortMode.None);
@@ -42,5 +44,8 @@ public class SubmitManager : MonoBehaviour
             pointText.text = points.ToString();
         }
 
+        boardSpawner.resumeBoard();
+        boardSpawner.board = null;
+        boardSpawner.SpawnNext();
     }
 }
