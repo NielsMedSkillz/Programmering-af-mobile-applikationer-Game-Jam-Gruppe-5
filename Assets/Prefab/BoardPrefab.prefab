@@ -65,6 +65,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PromptSpawner
   textPrefab: {fileID: 9063691538585689864, guid: 895aad24c144be64b99a59e4432c62c2, type: 3}
   textParent: {fileID: 97299476363719291}
+  submitManager: {fileID: 0}
 --- !u!1 &1524359858886860661
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,7 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

@@ -4,12 +4,16 @@ using UnityEngine.Splines;
 public class BoardSpawner : MonoBehaviour
 {
     public GameObject boardPrefab;
+    public SubmitManager submitManager;
 
     public GameObject board;
     public BoardData[] boards;
     public SplineContainer spline;
     public Inputs input;
     public Canvas canvas;
+
+    public bool stopped;
+    public bool resumed;
 
     int index = 0;
 
@@ -29,9 +33,18 @@ public class BoardSpawner : MonoBehaviour
         board.GetComponent<BoardFollowSpline>().spline = spline;
         board.GetComponent<BoardFollowSpline>().input = input;
 
-        board.GetComponent<PromptSpawner>().SpawnPrompt(boards[index]);
+        PromptSpawner spawner = board.GetComponent<PromptSpawner>();
+        spawner.submitManager = submitManager;
+        spawner.SpawnPrompt(boards[index]);
 
         index++;
+    }
+
+
+    public void resumeBoard()
+    {
+        board.GetComponent<BoardFollowSpline>().stopped = false;
+        board.GetComponent<BoardFollowSpline>().resumed = true;
     }
 
     void Start()

@@ -5,10 +5,9 @@ using TMPro;
 public class PromptClickDetector : MonoBehaviour, IPointerClickHandler
 {
     public int index;
+    public bool selected = false;
 
-    private TMP_Text text;
-    private bool selected = false;
-
+    TMP_Text text;
 
     void Awake()
     {
@@ -19,10 +18,6 @@ public class PromptClickDetector : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         selected = !selected;
- 
-        if (selected)
-            text.color = Color.red;
-        else
-            text.color = Color.white;
+        text.color = selected ? Color.red : Color.white;
     }
 }
