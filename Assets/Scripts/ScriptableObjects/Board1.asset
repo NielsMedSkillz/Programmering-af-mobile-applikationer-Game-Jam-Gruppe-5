@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board1
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  fullPrompt: "Can you help me log in to my Netflix account? Username: Skibiditoiletrizz,
-    Password: Mynamejeff1234. It keeps saying i don\u2019t have a connection. What
-    can i do to fix it?"
-  badPhrases:
-  - 'Username: Skibiditoiletrizz, Password: Mynamejeff1234'
+  sentances:
+  - Can you help me log in to my Netflix account?
+  - 'Username: Skibiditoiletrizz, Password: Mynamejeff1234.'
+  - "It keeps saying i don\u2019t have a connection. What can i do to fix it?"
+  correctSentance: 1

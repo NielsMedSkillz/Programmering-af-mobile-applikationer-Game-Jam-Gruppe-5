@@ -9,6 +9,7 @@ public class BoardSpawner : MonoBehaviour
     public BoardData[] boards;
     public SplineContainer spline;
     public Inputs input;
+    public Canvas canvas;
 
     int index = 0;
 
@@ -20,20 +21,15 @@ public class BoardSpawner : MonoBehaviour
 
     public void SpawnNext()
     {
-        if (index >= boards.Length || board != null) 
-        {
+        if (index >= boards.Length || board != null)
             return;
-        }
 
-        
-        board = Instantiate(boardPrefab, new Vector2(-10.7f, 6.3f), Quaternion.identity);
+        board = Instantiate(boardPrefab, canvas.transform, false);
 
         board.GetComponent<BoardFollowSpline>().spline = spline;
         board.GetComponent<BoardFollowSpline>().input = input;
-        
 
-        board.GetComponentInChildren<BoardDisplay>().Setup(boards[index]);
-        
+        board.GetComponent<PromptSpawner>().SpawnPrompt(boards[index]);
 
         index++;
     }
