@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using System.Collections;
 
 public class SubmitManager : MonoBehaviour
 {
@@ -33,6 +34,8 @@ public class SubmitManager : MonoBehaviour
             points++;
             Debug.Log("Correct!");
             pointText.text = points.ToString();
+            AudioManager.instance.PlaySound("Right");
+            if (ScreenTintManager.instance != null) ScreenTintManager.instance.Flash(Color.green);
         }
 
         else
@@ -40,6 +43,9 @@ public class SubmitManager : MonoBehaviour
             Debug.Log("Fail!");
             points--;
             pointText.text = points.ToString();
+            if (HealthManager.instance != null) HealthManager.instance.DecreaseHealth();
+            AudioManager.instance.PlaySound("Wrong");
+            if (ScreenTintManager.instance != null) ScreenTintManager.instance.Flash(Color.red);
         }
 
     }
