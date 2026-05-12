@@ -15,6 +15,8 @@ public class BoardSpawner : MonoBehaviour
     public bool stopped;
     public bool resumed;
 
+    int questionTime = 10;
+
     int index = 0;
 
     private void Update()

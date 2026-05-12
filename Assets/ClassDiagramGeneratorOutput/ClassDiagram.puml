@@ -1,0 +1,59 @@
+@startuml
+class BoardData {
+    + sentances : string[]
+    + correctSentance : int
+}
+class BoardFollowSpline {
+    + input : Inputs
+    + spline : SplineContainer
+    + speed : float
+    + t : float
+    + stopPoint : float
+    + stopped : bool
+    + resumed : bool
+}
+class BoardSpawner {
+    + boardPrefab : GameObject
+    + submitManager : SubmitManager
+    + board : GameObject
+    + boards : BoardData[]
+    + spline : SplineContainer
+    + input : Inputs
+    + canvas : Canvas
+    + stopped : bool
+    + resumed : bool
+}
+class Inputs {
+    + complete : InputAction
+    + click : InputAction
+}
+class Introskærm {
+}
+class PromptClickDetector {
+    + index : int
+    + selected : bool
+}
+class PromptSpawner {
+    + textPrefab : GameObject
+    + textParent : Transform
+    + submitManager : SubmitManager
+}
+class SubmitManager {
+    + correctIndex : int
+    + points : int
+    + pointText : TextMeshProUGUI
+}
+ScriptableObject <|-- BoardData
+MonoBehaviour <|-- BoardFollowSpline
+MonoBehaviour <|-- BoardSpawner
+MonoBehaviour <|-- Inputs
+MonoBehaviour <|-- Introskærm
+MonoBehaviour <|-- PromptClickDetector
+IPointerClickHandler <|.. PromptClickDetector
+MonoBehaviour <|-- PromptSpawner
+MonoBehaviour <|-- SubmitManager
+BoardFollowSpline --> Inputs : input
+BoardSpawner --> SubmitManager : submitManager
+BoardSpawner --> Inputs : input
+PromptSpawner --> SubmitManager : submitManager
+@enduml
