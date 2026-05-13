@@ -1,9 +1,10 @@
 using TMPro;
 using UnityEngine;
+using System.Linq;
 
 public class SubmitManager : MonoBehaviour
 {
-    public int correctIndex;
+    public int[] correctIndexes;
     public int points;
     public TextMeshProUGUI pointText;
 
@@ -11,36 +12,31 @@ public class SubmitManager : MonoBehaviour
     {
         PromptClickDetector[] prompts = FindObjectsByType<PromptClickDetector>(FindObjectsSortMode.None);
 
-        bool correctSelected = false;
-        bool wrongSelected = false;
+        bool failed = false;
 
         foreach (PromptClickDetector prompt in prompts)
         {
-            if (prompt.selected)
-            {
-                if (prompt.index == correctIndex)
-                {
-                    Debug.Log("donnneone");
-                    correctSelected = true;
-                }
+            bool shouldBeSelected = correctIndexes.Contains(prompt.index);
 
-                else wrongSelected = true;
+            if (prompt.selected != shouldBeSelected)
+            {
+                failed = true;
+                break;
             }
         }
 
-        if (correctSelected && !wrongSelected)
+        if (!failed)
         {
             points++;
             Debug.Log("Correct!");
-            pointText.text = points.ToString();
         }
-
         else
         {
-            Debug.Log("Fail!");
             points--;
-            pointText.text = points.ToString();
+            Debug.Log("Fail!");
         }
+
+        pointText.text = points.ToString();
 
     }
 }

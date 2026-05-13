@@ -4,5 +4,7 @@ using UnityEngine;
 public class BoardData : ScriptableObject
 {
     public string[] sentances;
-    public int correctSentance;
+    public int[] correctSentances;
 }
+
+

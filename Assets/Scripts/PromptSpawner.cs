@@ -9,7 +9,7 @@ public class PromptSpawner : MonoBehaviour
 
     public void SpawnPrompt(BoardData data)
     {
-        submitManager.correctIndex = data.correctSentance;
+        submitManager.correctIndexes = data.correctSentances;
 
         for (int i = 0; i < data.sentances.Length; i++)
         {
