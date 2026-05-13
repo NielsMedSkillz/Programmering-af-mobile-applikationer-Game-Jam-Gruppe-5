@@ -16,4 +16,4 @@ MonoBehaviour:
   - My app keeps returning a 401 unauthorized error when I try to fetch data.
   - What are common reasons this happens?
   - 'API key: sk-live-ABC123XYZ'
-  correctSentance: 2
+  correctSentances: 

@@ -16,4 +16,4 @@ MonoBehaviour:
   - 'What are common treatments for anxiety? '
   - 'Patient ID: 140398-1234 Referred for generalized anxiety symptoms and social
     avoidance. '
-  correctSentance: 1
+  correctSentances: 

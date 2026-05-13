@@ -16,4 +16,4 @@ MonoBehaviour:
   - I tried to make a purchase online using my card
   - 4111 1111 1111 1111
   - "but it failed. What are some common reasons payments don\u2019t go through? "
-  correctSentance: 1
+  correctSentances: 

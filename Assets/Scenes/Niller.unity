@@ -1494,7 +1494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 295605d11f5765447abec91368a0addc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  correctIndex: 0
+  correctIndexes: 
   points: 0
   pointText: {fileID: 641598955}
 --- !u!4 &1253169274
@@ -1790,14 +1790,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f9ef1dec79573924f94770fb0e09c9ed, type: 2}
   - {fileID: 11400000, guid: e56070d5d0ec7e241acc8a5fdbad39f4, type: 2}
   - {fileID: 11400000, guid: 282ec387aa2b2424395af777c291bf8a, type: 2}
-  - {fileID: 11400000, guid: 5502d01caaff17a438ac74e090d33154, type: 2}
-  - {fileID: 11400000, guid: 6f2446af8638ae04d9d93e95b16a4b31, type: 2}
-  - {fileID: 11400000, guid: 274608c89d323ab4b90abe8af36605f1, type: 2}
-  - {fileID: 11400000, guid: 4e01b54d4a4825a4d8be45b1dc297767, type: 2}
-  - {fileID: 11400000, guid: 9726ae3ad8fd3e84c931d5e59ccae1f5, type: 2}
-  - {fileID: 11400000, guid: b661bec15159e4a46ab3cb59bf9e2bb3, type: 2}
-  - {fileID: 11400000, guid: 2d8065845263e3c4b94e4fa05ed56994, type: 2}
-  - {fileID: 11400000, guid: 9147922a0acce254ba9e91c3a6a43774, type: 2}
   spline: {fileID: 1091893997}
   input: {fileID: 686246462}
   canvas: {fileID: 796224244}

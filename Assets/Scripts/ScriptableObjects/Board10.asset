@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Board10
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
   sentances:
-  - 'Hello my name is Katrine, my dog named Achoo has run away from home. Our address
-    is  '
-  - Old Moez Street 512
+  - 'Hello my name is Katrine, my dog named Achoo has run away from home. '
+  - Our address is Old Moez Street 512
   - can you search to see if someone has found our dog.
-  correctSentance: 1
+  correctSentances: 

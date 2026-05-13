@@ -16,4 +16,4 @@ MonoBehaviour:
   - 'I need help understanding how to update my account details. '
   - My CPR number is 120598-4321
   - and I think something might be wrong with my profile settings.
-  correctSentance: 1
+  correctSentances: 

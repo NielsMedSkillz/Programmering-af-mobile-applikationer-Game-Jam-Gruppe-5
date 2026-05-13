@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Board3
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
   sentances:
-  - What are some possible punishments for theft in Denmark?
-  - 'I was recently charged with theft and will be in court soon. '
-  correctSentance: 1
+  - Can you help me locate my target named Joseff Johndingle Berryfirm.
+  - 'He was last spotted near the old school Dingleberry high. I gotta end him. '
+  - 'I gotta end him. '
+  correctSentances: 

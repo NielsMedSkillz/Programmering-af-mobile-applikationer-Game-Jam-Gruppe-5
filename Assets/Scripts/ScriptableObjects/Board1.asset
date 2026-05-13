@@ -16,4 +16,4 @@ MonoBehaviour:
   - Can you help me log in to my Netflix account?
   - 'Username: Skibiditoiletrizz, Password: Mynamejeff1234.'
   - "It keeps saying i don\u2019t have a connection. What can i do to fix it?"
-  correctSentance: 1
+  correctSentances: 
