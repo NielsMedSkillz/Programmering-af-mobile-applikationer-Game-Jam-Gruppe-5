@@ -1,12 +1,14 @@
+using TMPro;
 using UnityEngine;
 
 public class SubmitManager : MonoBehaviour
 {
     public int correctIndex;
+    public int points;
+    public TextMeshProUGUI pointText;
 
     public void OnSubmit()
     {
-        Debug.Log("gwhetjjf");
         PromptClickDetector[] prompts = FindObjectsByType<PromptClickDetector>(FindObjectsSortMode.None);
 
         bool correctSelected = false;
@@ -17,15 +19,28 @@ public class SubmitManager : MonoBehaviour
             if (prompt.selected)
             {
                 if (prompt.index == correctIndex)
+                {
+                    Debug.Log("donnneone");
                     correctSelected = true;
-                else
-                    wrongSelected = true;
+                }
+
+                else wrongSelected = true;
             }
         }
 
         if (correctSelected && !wrongSelected)
+        {
+            points++;
             Debug.Log("Correct!");
+            pointText.text = points.ToString();
+        }
+
         else
+        {
             Debug.Log("Fail!");
+            points--;
+            pointText.text = points.ToString();
+        }
+
     }
 }

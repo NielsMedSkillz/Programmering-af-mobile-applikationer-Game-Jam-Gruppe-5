@@ -9,7 +9,6 @@ public class PromptSpawner : MonoBehaviour
 
     public void SpawnPrompt(BoardData data)
     {
-        // Use the assigned reference from BoardSpawner
         submitManager.correctIndex = data.correctSentance;
 
         for (int i = 0; i < data.sentances.Length; i++)

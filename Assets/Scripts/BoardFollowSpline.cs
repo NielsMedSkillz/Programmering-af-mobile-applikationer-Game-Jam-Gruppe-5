@@ -13,8 +13,8 @@ public class BoardFollowSpline : MonoBehaviour
     public float t = 0f;
 
     public float stopPoint = 0.5f;
-    bool stopped = false;
-    bool resumed = false;
+    public bool stopped = false;
+    public bool resumed = false;
 
     void Update()
     {   
@@ -26,14 +26,6 @@ public class BoardFollowSpline : MonoBehaviour
             {
                 t = stopPoint;
                 stopped = true;
-            }
-        }
-        else
-        {
-            if (input.complete.triggered)
-            {
-                stopped = false;
-                resumed = true;
             }
         }
 
@@ -48,4 +40,6 @@ public class BoardFollowSpline : MonoBehaviour
         Vector3 pos = spline.EvaluatePosition(t);
         transform.position = new Vector3(pos.x, pos.y, 0f);
     }
+
+
 }
