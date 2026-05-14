@@ -1,14 +1,21 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Splines.ExtrusionShapes;
 
 public class SubmitManager : MonoBehaviour
 {
     public int correctIndex;
     public int points;
     public TextMeshProUGUI pointText;
+    public bool submitLocked = true; //Change
+    public BoardSpawner boardSpawner; //Change
 
     public void OnSubmit()
     {
+        if (submitLocked) return; //Change
+
+        submitLocked = true; //Change
+
         PromptClickDetector[] prompts = FindObjectsByType<PromptClickDetector>(FindObjectsSortMode.None);
 
         bool correctSelected = false;
@@ -42,5 +49,8 @@ public class SubmitManager : MonoBehaviour
             pointText.text = points.ToString();
         }
 
+        boardSpawner.resumeBoard(); //Change
+
     }
+
 }

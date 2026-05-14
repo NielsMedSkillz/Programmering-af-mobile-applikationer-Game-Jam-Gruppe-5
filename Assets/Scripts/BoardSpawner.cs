@@ -30,6 +30,8 @@ public class BoardSpawner : MonoBehaviour
 
         board = Instantiate(boardPrefab, canvas.transform, false);
 
+        board.GetComponent<BoardFollowSpline>().boardSpawner = this; //Change
+        board.GetComponent<BoardFollowSpline>().submitManager = submitManager; //Change
         board.GetComponent<BoardFollowSpline>().spline = spline;
         board.GetComponent<BoardFollowSpline>().input = input;
 
@@ -41,10 +43,11 @@ public class BoardSpawner : MonoBehaviour
     }
 
 
-    public void resumeBoard()
+    public void resumeBoard() //No longer triggered by OnClick
     {
+
         board.GetComponent<BoardFollowSpline>().stopped = false;
-        board.GetComponent<BoardFollowSpline>().resumed = true;
+        board.GetComponent<BoardFollowSpline>().resumed = true;       
     }
 
     void Start()
