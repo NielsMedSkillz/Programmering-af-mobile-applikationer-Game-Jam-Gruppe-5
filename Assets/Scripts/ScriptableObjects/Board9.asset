@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board9
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - 'What are common treatments for anxiety? '
   - 'Patient ID: 140398-1234 Referred for generalized anxiety symptoms and social
     avoidance. '
-  correctSentance: 1
+  correctSentence: 1
+  wrongFeedback: 'ERROR: Confidential patient information registered'

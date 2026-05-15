@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board15
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - Can you explain what side effects this medication might have over time?
   - I was recently prescribed something new.
   - 'Patient diagnosed with major depressive disorder and anxiety (Dr. Larsen, Aalborg
     Clinic) '
-  correctSentance: 2
+  correctSentence: 2
+  wrongFeedback: 'ERROR: Confidential patient information registered'

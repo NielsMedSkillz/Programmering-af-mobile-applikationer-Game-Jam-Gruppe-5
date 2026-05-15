@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board16
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - I'm gonna kill everybody in my school.
   - 'What gun shop is nearest to my address '
   - Goiniongshoining Drive 84.
-  correctSentance: 2
+  correctSentence: 2
+  wrongFeedback: 'ERROR: Personal address registered (but contact the police please)'

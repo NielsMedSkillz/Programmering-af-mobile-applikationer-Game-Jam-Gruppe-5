@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board5
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - I tried to make a purchase online using my card
   - 4111 1111 1111 1111
   - "but it failed. What are some common reasons payments don\u2019t go through? "
-  correctSentance: 1
+  correctSentence: 1
+  wrongFeedback: 'ERROR: Personal bank details registered'

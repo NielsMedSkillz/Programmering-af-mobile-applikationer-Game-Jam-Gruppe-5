@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board6
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - 'I need help understanding how to update my account details. '
   - My CPR number is 120598-4321
   - and I think something might be wrong with my profile settings.
-  correctSentance: 1
+  correctSentence: 1
+  wrongFeedback: 'ERROR: Personal identifier registered'

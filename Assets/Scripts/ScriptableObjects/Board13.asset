@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board13
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - I received the wrong item in my order and want to know how to handle it.
   - "The product doesn\u2019t match what I selected when purchasing."
   - 'Order ID: 88421 Name: Lucas Andersen '
-  correctSentance: 2
+  correctSentence: 2
+  wrongFeedback: 'ERROR: Personal information and name registered'

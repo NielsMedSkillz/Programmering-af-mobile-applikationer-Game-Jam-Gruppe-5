@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board14
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - I am a 92 year old lady named Beatrice. My grandchild lives at
   - Gaynorth Avenue 67.
   - Can you send an ambulance to see if he is okay? Thank you Mr. AI. Kind Regards
     Mrs. Dafunck
-  correctSentance: 1
+  correctSentence: 1
+  wrongFeedback: 'ERROR: Personal address registered (bruh, AI er ikke en replacement
+    til politi)'

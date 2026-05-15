@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board8
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - 'What are some effective ways to manage stress on a daily basis? '
   - 'Session notes: Patient reports frequent panic attacks, trouble sleeping, and
     past trauma related to family conflict. '
-  correctSentance: 1
+  correctSentence: 1
+  wrongFeedback: 'ERROR: Confidential patient information registered'

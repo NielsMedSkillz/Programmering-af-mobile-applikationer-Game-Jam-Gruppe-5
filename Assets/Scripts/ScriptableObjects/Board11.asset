@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board11
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - How much interest is usually on a bank loan?
   - My friend James Sheffield owes a million in debt to the bank.
   - 'I want information to be better able to give him advice.  '
-  correctSentance: 1
+  correctSentence: 1
+  wrongFeedback: 'ERROR: Personal identifying information registered'

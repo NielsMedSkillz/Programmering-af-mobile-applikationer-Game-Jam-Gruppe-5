@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board12
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - 'How do I use my giftcard? I have this code:'
   - oBLUQY73pAobcCGS289NS
   - 'but I don''t know where to put it in.  '
-  correctSentance: 1
+  correctSentence: 1
+  wrongFeedback: 'ERROR: Confidential gift card code registered'

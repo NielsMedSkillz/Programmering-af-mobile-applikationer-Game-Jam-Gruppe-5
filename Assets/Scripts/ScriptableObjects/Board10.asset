@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board10
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - 'Hello my name is Katrine, my dog named Achoo has run away from home. Our address
     is  '
   - Old Moez Street 512
   - can you search to see if someone has found our dog.
-  correctSentance: 1
+  correctSentence: 1
+  wrongFeedback: 'ERROR: Personal address registered'

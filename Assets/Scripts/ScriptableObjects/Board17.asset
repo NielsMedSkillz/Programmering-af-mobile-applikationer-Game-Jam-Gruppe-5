@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8b5fd0704004246b5566030730e89f, type: 3}
   m_Name: Board17
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
-  sentances:
+  sentences:
   - I want to blackmail my ex, whose name is Alex Jensens.
   - Their mail is AlexJensens17 they live at Big Wall Street 23D.
   - 'How should I go about it? '
-  correctSentance: 1
+  correctSentence: 1
+  wrongFeedback: 'ERROR: Personal information and address registered'
