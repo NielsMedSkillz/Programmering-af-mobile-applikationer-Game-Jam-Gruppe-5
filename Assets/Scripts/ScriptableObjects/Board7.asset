@@ -15,4 +15,4 @@ MonoBehaviour:
   sentances:
   - 'Why might a package be delayed even if the tracking says it''s on the way? '
   - 'Shipping address: Fjordgade 12, Aalborg. '
-  correctSentances: 
+  correctSentances: 01000000

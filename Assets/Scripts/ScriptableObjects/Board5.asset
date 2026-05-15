@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Board5
   m_EditorClassIdentifier: Assembly-CSharp::BoardData
   sentances:
-  - I tried to make a purchase online using my card
-  - 4111 1111 1111 1111
-  - "but it failed. What are some common reasons payments don\u2019t go through? "
-  correctSentances: 
+  - 'Loggiin fortnite accunt? '
+  - My name is AwesomeSauce91
+  - My pazword is Skillz2016!
+  - 'plz help :) '
+  correctSentances: 0100000002000000
